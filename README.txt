@@ -1,8 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                 WERSJA POLSKA
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Zadanie składa się z dwóch części. Pierwszą jest implementacja silnika uogólnionej gry Kółko i Krzyżyk. Drugą jest implementacja programu rozwiązującego te wersje gry przy pomocy algorytmu min-max (https://pl.wikipedia.org/wiki/Algorytm_min-max).
-
 Uogólniona wersja silnika gry Kółko i Krzyżyk czyli rodzina gier NMK (https://en.wikipedia.org/wiki/M,n,k-game) pobiera 3 parametry N, M i K gdzie (N x M) to rozmiar planszy a (K) to liczba nieprzerwanie sąsiadujących ze sobą pól w ciągłej pionowej, poziomej bądź ukośnej linii które są warunkiem wygrania.
 Należy zaimplementować deterministyczny generator posunięć, który dodaje pion gracza (np. Kółko bądź Krzyżyk, albo biały bądź czarny pionek) zaczynając od górnego lewego rogu, kontynuując w rzędach a następnie w kolumnach. Na potrzeby naszego zadania posunięcia pierwszego gracza będziemy oznaczać jedynkami a drugiego dwójkami, niezajęte pola będą oznaczone zerami. Zatem w podstawowej grze Kółko i krzyżyk (NMK 3,3,3) wygenerowane możliwe posunięcia dla pustej planszy to (kolejność jest ważna):
 
@@ -10,11 +5,9 @@ Należy zaimplementować deterministyczny generator posunięć, który dodaje pi
 000 000 000 100 010 001 000 000 000
 000 000 000 000 000 000 100 010 001
 
-Silnik gry powinien pozwalać na:
+Silnik gry pozwala na:
 1. generowanie wszystkich możliwych posunięć,
 2. Ocenę gry w postaci odpowiedźi na pytanie - czy gra się zakończyła i czy gracz wygrał/zremisował/przegrał?
-
-W wersji ulepszonej silnik jeśli jeden z wygenerowanych stanów będzie końcowym (jeden z graczy wygra albo plansza będzie pełna, co oznacza remis) silnik generuje tylko ten jeden stan. Jeśli jest ich kilka to generuje pierwszy wygrywający/remisujący stan. Zauważmy, że nowo wygenerowany stan jeśli będzie wygrywający to tylko dla gracza aktywnego, nie ma możliwości aby gracz spowodował swoim posunięciem natychmiastową wygraną przeciwnika.
 
 Przykładowo wszystkie możliwe stany poniższego (aktywnym graczem jest 1):
 102
@@ -215,5 +208,3 @@ SOLVE_GAME_STATE 3 3 3 1
 Wyjście:
 
 FIRST_PLAYER_WINS
-
-Wszystkie testy użyte w zadaniu dostępne są na stronie projektu na platformie e-nauczanie.
